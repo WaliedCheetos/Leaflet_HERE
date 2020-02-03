@@ -1,9 +1,9 @@
 
 
 var config = {
-    HEREIoT_APIKey: "pmYeJOpIGhJHSyyizwSKKPJoAHdjJ_bj12yfckgiT4E",
-    HEREIoT_AppID: "Lrw0yF4Z4nFpEe7jJxcd",
-    HEREIoT_AppCode: "9zhfUoi6kIHQqt85SunXuw",
+    HEREIoT_APIKey: "",
+    HEREIoT_AppID: "",
+    HEREIoT_AppCode: "",
 
     HEREIoT_initial_longitude: 10.00,
     HEREIoT_initial_latitude: 5.00,
@@ -13,9 +13,9 @@ var config = {
 }
 
 var map = L.map( 'map', {
-    center: [10.0, 5.0],
+    center: [config.HEREIoT_initial_longitude, config.HEREIoT_initial_latitude],
     minZoom: 2,
-    zoom: 2
+    zoom: config.HEREIoT_initial_zoom
 });
 
 L.tileLayer('https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?apiKey=' + config.HEREIoT_APIKey, {
